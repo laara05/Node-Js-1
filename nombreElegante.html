@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificador de Nombres Elegantes</title>
+<script>
+  function verificarNombre() {
+    var nombre = document.getElementById("nombre").value.toLowerCase();
+    var esElegante = nombre.startsWith("a") && nombre.endsWith("a");
+    document.getElementById("resultado").innerHTML = esElegante;
+  }
+</script>
+</head>
+<body>
+  <h2>Verificador de Nombres Elegantes</h2>
+  <form>
+    <label for="nombre">Ingresa un nombre:</label><br>
+    <input type="text" id="nombre" name="nombre"><br><br>
+    <button type="button" onclick="verificarNombre()">Verificar</button>
+  </form>
+  <div id="resultado"></div>
+</body>
+</html>
